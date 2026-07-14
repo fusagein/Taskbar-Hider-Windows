@@ -2,7 +2,7 @@
 
 > 🎓 This is my first project! Feedback and suggestions are welcome 💛
 
-A simple and clean Windows application to hide and show the taskbar with just one click.
+A simple and clean Windows application to hide and show the taskbar with just one click
 
 ![Platform](https://img.shields.io/badge/platform-Windows-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -20,14 +20,14 @@ A simple and clean Windows application to hide and show the taskbar with just on
 
 ## 📥 Download
 
-Download the latest version from the [Releases](../../releases) page.
+Download the latest version from the [Releases](../../releases) page
 
 ## 🚀 How to Use
 
-1. Download the `TaskBarHider.exe` file from the Releases section.
-2. Run the application.
-3. Click the button to hide or show the taskbar.
-4. Enable **"Start with Windows"** option if you want it to run at startup.
+1. Download the `TaskBarHider.exe` file from the Releases section
+2. Run the application
+3. Click the button to hide or show the taskbar
+4. Enable **"Start with Windows"** option if you want it to run at startup
 
 ## 📸 Screenshots
 
@@ -42,7 +42,7 @@ Download the latest version from the [Releases](../../releases) page.
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## 👤 Author
 
