@@ -1,3 +1,5 @@
+🌐 **Other Languages:** [فارسی](README.fa.md)
+
 its my first project btw 😄
 
 # Taskbar Hider
