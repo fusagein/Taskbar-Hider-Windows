@@ -1,3 +1,5 @@
+its my first project btw 😄
+
 # Taskbar Hider
 
 A simple and clean Windows application to hide and show the taskbar with just one click
