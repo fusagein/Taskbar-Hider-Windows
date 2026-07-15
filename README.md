@@ -1,7 +1,7 @@
 # TaskBar Hider
 
 <p align="center">
-  <img src="<img width="462" height="447" alt="image (3)" src="https://github.com/user-attachments/assets/5f374602-07fe-49ba-b027-778dbc39efc9" />" width="420" alt="TaskBar Hider Screenshot"> 
+  <img src="<img width="462" height="447" alt="image (3)" src="https://github.com/user-attachments/assets/02ec60bc-3a10-418c-b028-4323b81acc01" />
 </p>
 
 <p align="center">
