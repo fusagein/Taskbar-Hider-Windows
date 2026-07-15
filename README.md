@@ -71,9 +71,6 @@
 4️⃣ Click "Enable" to bring it back
 5️⃣ Close the window — it stays in the system tray! 🔔
 
-text
-
-
 > 💡 **Tip:** Enable **Auto-Start** to have it launch automatically with Windows!
 
 ---
