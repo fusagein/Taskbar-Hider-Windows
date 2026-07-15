@@ -66,9 +66,13 @@
 
 ## 🛠️ Usage
 1️⃣ Download the .exe from Releases
+
 2️⃣ Run TaskBarHider.exe
+
 3️⃣ Click "Disable" to hide the TaskBar
+
 4️⃣ Click "Enable" to bring it back
+
 5️⃣ Close the window — it stays in the system tray! 🔔
 
 > 💡 **Tip:** Enable **Auto-Start** to have it launch automatically with Windows!
