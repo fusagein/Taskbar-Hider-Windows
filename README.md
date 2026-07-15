@@ -12,6 +12,10 @@
 </p>
 
 <p align="center">
+  <a href="README.fa.md">🇮🇷 مشاهده به فارسی</a>
+</p>
+
+<p align="center">
   <b>🚀 Hide your Windows TaskBar with a single click! 🚀</b>
 </p>
 
@@ -65,13 +69,14 @@
 ---
 
 ## 🛠️ Usage
-1️⃣ Download the .exe from Releases
 
-2️⃣ Run TaskBarHider.exe
+1️⃣ Download the `.exe` from Releases
 
-3️⃣ Click "Disable" to hide the TaskBar
+2️⃣ Run `TaskBarHider.exe`
 
-4️⃣ Click "Enable" to bring it back
+3️⃣ Click `Disable` to hide the TaskBar
+
+4️⃣ Click `Enable` to bring it back
 
 5️⃣ Close the window — it stays in the system tray! 🔔
 
