@@ -1,60 +1,124 @@
-# Taskbar Hider
+# TaskBar Hider
 
-> 🎓 This is my first project! Feedback and suggestions are welcome 💛
+A lightweight, standalone Windows GUI application to **disable and hide the TaskBar** while running, with automatic restoration on exit.
 
-A simple and clean Windows application to hide and show the taskbar with just one click
-
-![Platform](https://img.shields.io/badge/platform-Windows-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Platform](https://img.shields.io/badge/platform-Windows%20x64-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Version](https://img.shields.io/badge/version-1.0.0-orange)
 
-🌐 **Other Languages:** [فارسی](README.fa.md)
+---
 
-## ✨ Features
+## Features
 
-- 🎯 Clean and minimal user interface
-- 👁️ Hide/Show Windows taskbar instantly
-- 🚀 Startup support (auto-run on Windows boot)
-- 💾 Lightweight and portable (no installation required)
-- 🆓 Completely free and open source
+- **Disable TaskBar** — Completely hides and disables input to the Windows TaskBar
+- **Enable TaskBar** — Restores the TaskBar instantly
+- **System Tray** — Minimizes to tray and keeps running in the background
+- **Startup Support** — Optional auto-start with Windows (`-tray` flag)
+- **Boot Persistence** — If TaskBar was disabled before reboot, it auto-disables on next boot (only when startup is enabled)
+- **Single Instance** — Only one instance runs at a time
+- **Dark UI** — Clean, modern dark interface using GDI+
+- **Zero Dependencies** — Single portable `.exe` file (~850 KB)
 
-## 📥 Download
+---
 
-Download the latest version from the [Releases](../../releases) page
+## Screenshot
 
-## 🚀 How to Use
+![TaskBar Hider Screenshot](assets/TaskBarHider.png)
 
-1. Download the `TaskBarHider.exe` file from the Releases section
-2. Run the application
-3. Click the button to hide or show the taskbar
-4. Enable **"Start with Windows"** option if you want it to run at startup
+---
 
-## 📸 Screenshots
+## Download
 
-<p align="center">
-  <img src="screenshot.png" alt="Main Window" width="400"/>
-</p>
+Get the latest release from the [Releases](../../releases) page.
 
-## 💻 System Requirements
+No installation required. Just download `TaskBarHider.exe` and run.
 
-- Windows 10 or 11
-- No installation required (Portable)
+---
 
-## 📝 License
+## How to Use
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+1. Run `TaskBarHider.exe`
+2. Click **Disable TaskBar** to hide the TaskBar
+3. Click **Enable TaskBar** to bring it back
+4. Click **Close (X)** to minimize to system tray
+5. Right-click the tray icon to **Restore** or **Exit**
 
-## 👤 Author
+> **Note:** The TaskBar is automatically restored when you exit the application.
+
+---
+
+## Build from Source
+
+### Requirements
+
+- MinGW-w64 toolchain (`x86_64-w64-mingw32-g++`)
+- ImageMagick (optional, for icon generation)
+
+### Compile
+
+```bash
+# Compile resources
+x86_64-w64-mingw32-windres resource.rc -O coff -o resource.o
+
+# Build executable
+x86_64-w64-mingw32-g++ -O2 -static-libgcc -static-libstdc++ -municode \
+  TaskBarHider.cpp resource.o -o TaskBarHider.exe \
+  -lgdiplus -ldwmapi -lshell32 -lole32 -luser32 -lkernel32 -lgdi32 -lcomctl32 -ladvapi32 -mwindows
+```
+
+### One-liner
+
+```bash
+x86_64-w64-mingw32-windres resource.rc -O coff -o resource.o && \
+x86_64-w64-mingw32-g++ -O2 -static-libgcc -static-libstdc++ -municode \
+  TaskBarHider.cpp resource.o -o TaskBarHider.exe \
+  -lgdiplus -ldwmapi -lshell32 -lole32 -luser32 -lkernel32 -lgdi32 -lcomctl32 -ladvapi32 -mwindows
+```
+
+---
+
+## Project Structure
+
+```
+TaskBarHider/
+├── TaskBarHider.cpp    # Main source code
+├── github_icon.h       # Embedded GitHub logo (PNG byte array)
+├── resource.rc         # Windows resource file (icon)
+├── app_icon.ico        # Application icon (multi-size)
+├── assets/
+│   └── TaskBarHider.png    # Screenshot / icon source
+├── .gitignore
+├── LICENSE
+└── README.md
+```
+
+---
+
+## Technical Details
+
+- **Language:** C++ (Win32 API + GDI+)
+- **Architecture:** x64
+- **UI Framework:** Custom GDI+ rendering (no external UI libs)
+- **Registry:** Uses `HKCU\Software\TaskBarHider` for state persistence
+- **Auto-hide Methods:**
+  - `StuckRects3` / `MMStuckRects3` registry modification
+  - `SHAppBarMessage(ABM_SETSTATE, ABS_AUTOHIDE)`
+  - `EnableWindow(FALSE)` + `SetWindowPos(SWP_HIDEWINDOW)`
+  - 100ms enforcement timer while disabled
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Author
 
 **fusagein**
 
 - GitHub: [@fusagein](https://github.com/fusagein)
 
-## 💬 Feedback
+If you found any issues, please report them on [GitHub Issues](../../issues).
 
-If you have any suggestions or find a bug, please open an [issue](../../issues). 
-Your feedback helps me improve! 🙏
-
----
-
-⭐ If you like this project, please give it a star! It motivates me to build more projects.
