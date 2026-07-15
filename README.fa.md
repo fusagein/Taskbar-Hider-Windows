@@ -1,3 +1,5 @@
+<div dir="rtl">
+
 # 🖥️ TaskBar Hider
 
 <p align="center">
@@ -9,6 +11,10 @@
   <img src="https://img.shields.io/badge/💻_platform-Windows%20x64-28a745?style=for-the-badge">
   <img src="https://img.shields.io/badge/📜_license-MIT-yellow?style=for-the-badge">
   <img src="https://img.shields.io/badge/⭐_stars-welcome-ff69b4?style=for-the-badge">
+</p>
+
+<p align="center">
+  <a href="README.md">🇬🇧 View in English</a>
 </p>
 
 <p align="center">
@@ -107,3 +113,5 @@
 <p align="center">
   <sub>🔧 ساخته شده برای ویندوز • 🎯 طراحی شده برای سادگی • ☕ با نیروی قهوه</sub>
 </p>
+
+</div>
