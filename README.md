@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="README.fa.md">🇮🇷 مشاهده به فارسی</a>
+  <a href="README.fa.md"> Farsi | فارسی</a>
 </p>
 
 <p align="center">
